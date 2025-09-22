@@ -1,0 +1,191 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated Background Shapes */
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.shape1 {
+    width: 400px;
+    height: 400px;
+    background: #e94560;
+    top: -50px;
+    left: -100px;
+    animation: move 20s infinite alternate;
+}
+
+.shape2 {
+    width: 500px;
+    height: 500px;
+    background: #0f3460;
+    bottom: -100px;
+    right: -150px;
+    animation: move 25s infinite alternate-reverse;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+        transform: translate(100px, 150px) rotate(180deg);
+    }
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* The Glass Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+header p {
+    text-align: center;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+/* Upload Section */
+.upload-section {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.upload-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type="file"] {
+    color: #e0e0e0;
+}
+
+/* Custom file input style */
+input[type="file"]::file-selector-button {
+    background: #e94560;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #c73850;
+}
+
+button[type="submit"] {
+    background: #16213e;
+    color: #fff;
+    border: 1px solid #e94560;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #e94560;
+}
+
+/* Document List Table */
+.document-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.document-list th, .document-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.document-list th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.document-list tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.no-docs {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9em;
+    transition: background 0.3s;
+}
+
+.btn-download {
+    background-color: #0f3460;
+}
+.btn-download:hover {
+    background-color: #1a5f9e;
+}
+
+.btn-delete {
+    background-color: #c21807;
+}
+.btn-delete:hover {
+    background-color: #e52b1a;
+}
